@@ -1,0 +1,351 @@
+/* Import Google Fonts for Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+
+/* Font-face declarations for Stella (if you have the font files) */
+@font-face {
+  font-family: "Stella";
+  src: url("../fonts/Stella-Book.woff2") format("woff2"),
+       url("../fonts/Stella-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stella";
+  src: url("../fonts/Stella-Bold.woff2") format("woff2"),
+       url("../fonts/Stella-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Base typography */
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000; /* bp-black/secondary */
+    background-color: #FFFFFF; /* bp-white */
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Stella", serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #023F5A; /* bp-blue */
+    margin-top: 0;
+}
+
+.chart-units {
+    color: #000000; /* bp-black */
+    font-size: 12px;
+    text-align: center;
+    margin: 0px 0 0px 0;
+}
+
+.date {
+    color: #023F5A; /* bp-blue */
+    text-align: left;
+    font-weight: normal;
+}
+
+h4 {
+    color: #000000; /* bp-black */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px 0 0px 0;
+}
+
+.panel-header {
+    color: #000000; /* bp-black */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px 0 0px 0;
+}
+
+.chart-notes {
+    color: #000000; /* bp-black */
+    font-size: 12px;
+}
+
+.chart-title {
+    color: #023F5A; /* bp-blue */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 1.5px solid #023F5A; /* bp-blue */
+}
+
+/* Links */
+a {
+    color: #9B7D40; /* bp-ocre/primary */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #7d6433; /* darkened bp-ocre */
+    text-decoration: underline;
+}
+
+/* Code styling */
+code, pre {
+    font-family: "Courier New", monospace;
+    background-color: #C2C2C4; /* bp-tertiary */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+/* Back to top button */
+.back-to-top {
+    background-color: #023F5A; /* bp-blue */
+    color: #FFFFFF;
+    opacity: 0;
+    transition: opacity .6s ease-in-out;
+    z-index: 999;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 0%;
+}
+
+a.back-to-top {
+    font-weight: 1000;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: 2px;
+    padding-top: 14px;
+}
+
+.back-to-top:hover, .back-to-top:focus, .back-to-top:visited {
+    color: #FFFFFF;
+}
+
+.back-to-top.show {
+    opacity: 1;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==== QUARTO SPECIFIC STYLES ==== */
+
+/* Quarto TOC styling */
+.sidebar nav[role="doc-toc"] a {
+    color: #000000; /* bp-black */
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sidebar nav[role="doc-toc"] a:hover {
+    color: #9B7D40; /* bp-ocre/primary */
+}
+
+/* Quarto Tabby tabset styles */
+[role="tab"] {
+    color: #000000 !important; /* bp-black */
+    background-color: white !important;
+    border: 1px solid transparent !important;
+    border-radius: 0 !important;
+    font-size: 17px !important;
+    font-family: "Open Sans", sans-serif !important;
+    padding: 0.5rem 1rem !important;
+    text-decoration: none !important;
+}
+
+[role="tab"][aria-selected="true"] {
+    color: #9B7D40 !important; /* bp-ocre/primary */
+    background-color: #eee !important;
+    font-weight: bold !important;
+    border: 1px solid #eee !important;
+    border-bottom-color: transparent !important;
+}
+
+[role="tab"]:hover {
+    color: #9B7D40 !important; /* bp-ocre/primary */
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+/* Style the tab list container */
+[role="tablist"] {
+    border-bottom: 1px solid #ddd !important;
+    margin-bottom: 1rem !important;
+}
+
+/* ==== LAYOUT AND SPACING OVERRIDES ==== */
+
+/* Remove all body margins and padding */
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+body.quarto-light {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Override main content area padding */
+#quarto-content {
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Ensure document content has minimal padding */
+#quarto-document-content {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    margin-left: -30px !important;
+    max-width: 100% !important;
+}
+
+/* Fix the page columns - remove negative margins and gaps */
+.page-columns {
+    gap: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Remove any parent container padding/margins */
+body > div {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+}
+
+.content {
+    max-width: none !important;
+    padding: 0 2rem !important;
+}
+
+/* Remove Quarto's default container margins */
+.quarto-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+}
+
+.quarto-container-default {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Remove any container max-width restrictions */
+.container, .container-fluid, .container-xxl, .container-xl, 
+.container-lg, .container-md, .container-sm {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Force the sidebar to start at the left edge */
+.sidebar.toc-left {
+    background-color: transparent !important;
+    width: 200px !important;
+    padding: 10px 1px 10px 0px !important;
+    margin-left: 0 !important;
+    position: sticky !important;
+    top: 0 !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+    left: 0 !important;
+}
+
+/* Style just the TOC navigation box */
+.sidebar nav[role="doc-toc"] {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Keep your existing TOC link styles */
+.sidebar nav[role="doc-toc"] a {
+    color: #000000; /* bp-black */
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sidebar nav[role="doc-toc"] a:hover {
+    color: #9B7D40; /* bp-ocre/primary */
+}
+
+/* Ensure the entire grid starts from the left */
+.page-columns {
+    gap: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: relative !important;
+    left: 0 !important;
+}
+
+/* Force the grid container to start from the left edge */
+#quarto-content > * {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Add logo at the bottom of the sidebar */
+.sidebar.toc-left::after {
+    content: "";
+    display: block;
+    background-image: url('logos/AssinaturaC/PNG/1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 180px;
+    height: 80px;
+    margin: 20px auto 10px auto;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+}
+
+/* Add logo to title area */
+.quarto-title-block::before {
+    content: "";
+    display: block;
+    float: right;
+    background-image: url('logos/AssinaturaE/PNG/1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 80px;
+    margin-left: 10px;
+}
